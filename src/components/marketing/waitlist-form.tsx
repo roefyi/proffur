@@ -1,18 +1,17 @@
 "use client";
 
-import { usePostHog } from "posthog-js/react";
 import { useActionState, useEffect } from "react";
 
 import {
   submitWaitlistSignup,
   type WaitlistFormState,
 } from "@/app/actions/waitlist";
+import { captureWhenReady } from "@/lib/posthog-capture";
 import { cn } from "@/lib/utils";
 
 const initialState: WaitlistFormState = { status: "idle" };
 
 export function WaitlistForm() {
-  const posthog = usePostHog();
   const [state, formAction, pending] = useActionState(
     submitWaitlistSignup,
     initialState,
@@ -20,8 +19,8 @@ export function WaitlistForm() {
 
   useEffect(() => {
     if (state.status !== "success") return;
-    posthog?.capture("waitlist_signup");
-  }, [state.status, posthog]);
+    captureWhenReady("waitlist_signup");
+  }, [state.status]);
 
   if (state.status === "success") {
     return (

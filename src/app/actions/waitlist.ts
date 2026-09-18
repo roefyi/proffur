@@ -1,5 +1,6 @@
 "use server";
 
+import { captureServerEvent } from "@/lib/posthog-server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export type WaitlistFormState =
@@ -39,6 +40,7 @@ export async function submitWaitlistSignup(
       };
     }
 
+    void captureServerEvent("waitlist_signup");
     return { status: "success" };
   } catch (err) {
     console.error("waitlist signup error", err);

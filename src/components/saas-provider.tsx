@@ -11,11 +11,15 @@ function initPostHog() {
     return;
   }
 
-  const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+  const key = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
   const host =
-    process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com";
+    process.env.NEXT_PUBLIC_POSTHOG_HOST?.trim() ||
+    "https://us.i.posthog.com";
 
   if (!key) {
+    console.warn(
+      "[Cifon] PostHog is off: missing NEXT_PUBLIC_POSTHOG_KEY at build time. Add it in Vercel → Settings → Environment Variables, then redeploy.",
+    );
     return;
   }
 
