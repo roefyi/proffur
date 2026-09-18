@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 
 import { SaasProvider } from "@/components/saas-provider";
+import { ThemeByTime } from "@/components/theme-by-time";
+import { nightThemeInlineScript } from "@/lib/theme-schedule";
 
 import "./globals.css";
 
@@ -31,9 +33,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: nightThemeInlineScript() }} />
+      </head>
       <body className="flex min-h-full flex-col">
+        <ThemeByTime />
         <SaasProvider>{children}</SaasProvider>
       </body>
     </html>

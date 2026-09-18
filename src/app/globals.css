@@ -88,6 +88,34 @@
   --sidebar-ring: #ff634a;
 }
 
+.dark {
+  color-scheme: dark;
+  --background: #141416;
+  --foreground: #f4f4f6;
+  --card: #232326;
+  --card-foreground: #f4f4f6;
+  --popover: #1c1c1f;
+  --popover-foreground: #f4f4f6;
+  --primary: #ff634a;
+  --primary-foreground: #ffffff;
+  --secondary: #232326;
+  --secondary-foreground: #f4f4f6;
+  --muted: #232326;
+  --muted-foreground: #b4b4bc;
+  --accent: #2a2a2e;
+  --accent-foreground: #f4f4f6;
+  --destructive: #e74c3c;
+  --border: #3a3a40;
+  --input: #232326;
+  --ring: #ff634a;
+  --sidebar: #141416;
+  --sidebar-foreground: #f4f4f6;
+  --sidebar-border: #3a3a40;
+  --color-opaline-bg: #141416;
+  --color-opaline-surface: #232326;
+  --color-opaline-muted: #3a3a40;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -125,4 +153,18 @@
   .animate-grok-rise {
     animation: none;
   }
+}
+
+/* Problem section: soft band in light mode; slightly deeper than page in dark */
+.marketing-problem-band {
+  background: color-mix(in srgb, var(--secondary) 45%, var(--background));
+}
+
+.dark .marketing-problem-band {
+  background: #0f0f11;
+  border-color: color-mix(in srgb, var(--border) 65%, transparent);
+}
+
+.dark .marketing-problem-list > :not([hidden]) ~ :not([hidden]) {
+  border-color: color-mix(in srgb, var(--border) 55%, transparent);
 }

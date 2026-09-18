@@ -24,7 +24,7 @@ export default function MarketingPage() {
         </div>
       </main>
 
-      <div className="border-t border-border/80 bg-opaline-surface/40">
+      <div className="marketing-problem-band border-t border-border/80">
         <div className="mx-auto max-w-2xl px-6 py-20 sm:py-24">
           <ProblemSection />
         </div>

@@ -31,7 +31,7 @@ export function ProblemSection() {
           The work is out there. Finding it shouldn&apos;t be a second job.
         </h2>
       </Reveal>
-      <ul className="mt-10 divide-y divide-border">
+      <ul className="marketing-problem-list mt-10 divide-y divide-border/80">
         {pains.map((pain, index) => (
           <li key={pain.title} className="py-6 first:pt-0 last:pb-0">
             <Reveal delay={120 + index * 100}>
