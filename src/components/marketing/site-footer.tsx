@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/marketing/reveal";
 
 const contactEmail =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@proffur.com";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "hello@proffur.com";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
