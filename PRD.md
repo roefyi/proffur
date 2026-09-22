@@ -1,6 +1,6 @@
-# Cifon — Product Requirements Document
+# proffur — Product Requirements Document
 
-**Repository:** [github.com/roefyi/cifon](https://github.com/roefyi/cifon)
+**Repository:** [github.com/roefyi/proffur](https://github.com/roefyi/proffur)
 
 ## Problem
 
@@ -63,6 +63,6 @@ The goal of this phase is not to build the product — it's to validate that rea
 
 ## Open questions (need your decision, not blocking the landing page build)
 
-- Final product name and domain
+- Domain (app name: **proffur**)
 - Which single trade to build full functionality for first (decision to come out of the day 3-5 interviews)
 - Pricing — not needed for the waitlist, but worth having a rough number in mind before the day 3-5 conversations so you can ask "would you pay $X/month" concretely

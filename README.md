@@ -1,6 +1,6 @@
-# Cifon
+# proffur
 
-Marketing landing page and email waitlist for Cifon — helping small trade contractors find and qualify for government bids.
+Marketing landing page and email waitlist for proffur — helping small trade contractors find and qualify for government bids.
 
 See [PRD.md](./PRD.md) for product scope and sprint goals.
 
@@ -20,6 +20,8 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+Production: [https://proffur.vercel.app](https://proffur.vercel.app)
 
 ## Stack
 

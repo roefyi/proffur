@@ -10,7 +10,7 @@ export default function MarketingLayout({
         <div className="mx-auto flex max-w-3xl items-center px-6 py-6 sm:py-8">
           <Reveal delay={0}>
             <span className="pointer-events-auto text-sm font-medium tracking-tight text-foreground/80">
-              Cifon
+              proffur
             </span>
           </Reveal>
         </div>

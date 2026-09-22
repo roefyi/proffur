@@ -19,13 +19,13 @@ export const HERO_VARIANTS: HeroVariant[] = [
     id: "one-place",
     headline: "Stop checking a dozen websites for government work.",
     subhead:
-      "City, county, schools, universities, and state postings land in one place. Cifon flags what fits your business and what you need to submit on time.",
+      "City, county, schools, universities, and state postings land in one place. Proffur flags what fits your business and what you need to submit on time.",
   },
   {
     id: "paper-chase",
     headline: "Public contracts, without the daily paper chase.",
     subhead:
-      "Cifon will watch public bid boards for you and highlight opportunities that match your trade, licenses, and insurance, so you spend time bidding, not hunting.",
+      "Proffur will watch public bid boards for you and highlight opportunities that match your trade, licenses, and insurance, so you spend time bidding, not hunting.",
   },
 ];
 

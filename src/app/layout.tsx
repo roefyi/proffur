@@ -24,9 +24,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Cifon | Find public contracts you can win",
+  title: "proffur | Find public contracts you can win",
   description:
-    "Cifon helps small trade contractors discover and qualify for government bids without checking a dozen websites every day. Join the waitlist.",
+    "Proffur helps small trade contractors discover and qualify for government bids without checking a dozen websites every day. Join the waitlist.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

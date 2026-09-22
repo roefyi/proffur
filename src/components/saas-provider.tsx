@@ -18,7 +18,7 @@ function initPostHog() {
 
   if (!key) {
     console.warn(
-      "[Cifon] PostHog is off: missing NEXT_PUBLIC_POSTHOG_KEY at build time. Add it in Vercel → Settings → Environment Variables, then redeploy.",
+      "[proffur] PostHog is off: missing NEXT_PUBLIC_POSTHOG_KEY at build time. Add it in Vercel → Settings → Environment Variables, then redeploy.",
     );
     return;
   }

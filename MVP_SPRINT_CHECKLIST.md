@@ -2,9 +2,9 @@
 
 Each **bolded line** is one Linear issue title. Bullets are the issue description / sub-tasks. Grouped by day ranges for one cycle or separate milestones.
 
-**Linear project:** [Cifon](https://linear.app/freespace/project/cifon-1f10cd05f0a8) (issues FRE-41–FRE-60, labels Day 1-2 / Day 3-5 / Day 6-12 / Day 13-14)
+**Linear project:** [proffur](https://linear.app/freespace/project/proffur-1f10cd05f0a8) (issues FRE-41–FRE-60, labels Day 1-2 / Day 3-5 / Day 6-12 / Day 13-14)
 
-> **As-built (Day 1–2):** Landing page, email-only waitlist, Supabase (`waitlist_signups`: `email`, `created_at`), PostHog (`waitlist_signup` without trade/would-pay), Opaline/shadcn UI, `(marketing)` route group, `SaasProvider` (PostHog). Repo pushed to [github.com/roefyi/cifon](https://github.com/roefyi/cifon). Trade/size/would-pay deferred to Day 3–5 interviews per PRD.
+> **As-built (Day 1–2):** Landing page, email-only waitlist, Supabase (`waitlist_signups`: `email`, `created_at`), PostHog (`waitlist_signup` without trade/would-pay), Opaline/shadcn UI, `(marketing)` route group, `SaasProvider` (PostHog). Repo pushed to [github.com/roefyi/proffur](https://github.com/roefyi/proffur). Trade/size/would-pay deferred to Day 3–5 interviews per PRD.
 
 ---
 
@@ -14,7 +14,7 @@ Each **bolded line** is one Linear issue title. Bullets are the issue descriptio
 
 - [x] Initialize Next.js (App Router, TypeScript)
 - [x] Push to GitHub
-- [ ] Connect to Vercel (free tier) for auto-deploy
+- [x] Connect to Vercel (free tier) for auto-deploy — [proffur.vercel.app](https://proffur.vercel.app)
 
 **Install and configure Tailwind + shadcn**
 
@@ -24,7 +24,7 @@ Each **bolded line** is one Linear issue title. Bullets are the issue descriptio
 
 **Set up Supabase project (free tier)**
 
-- [x] Create project (org: Cifon)
+- [x] Create project (org: proffur)
 - [x] `waitlist_signups`: `email`, `created_at` (email-only waitlist)
 - [ ] Add Supabase env vars to Vercel
 
@@ -54,7 +54,7 @@ Each **bolded line** is one Linear issue title. Bullets are the issue descriptio
 
 **Point domain and go live**
 
-- [ ] Point domain at Vercel (or use `*.vercel.app` subdomain)
+- [x] Point domain at Vercel — production: [proffur.vercel.app](https://proffur.vercel.app) (custom domain TBD)
 - [ ] Full click-through test before sharing link
 
 ---
