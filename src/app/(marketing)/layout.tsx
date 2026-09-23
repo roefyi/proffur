@@ -18,7 +18,7 @@ export default function MarketingLayout({
               height={130}
               priority
               className="pointer-events-auto dark:invert"
-              style={{ height: 24, width: "auto" }}
+              style={{ height: 28, width: "auto" }}
             />
           </Reveal>
         </div>
