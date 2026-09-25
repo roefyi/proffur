@@ -1,6 +1,8 @@
 import { HeroSection } from "@/components/marketing/hero-section";
+import { HowItWorks } from "@/components/marketing/how-it-works";
 import { ProblemSection } from "@/components/marketing/problem-section";
 import { Reveal } from "@/components/marketing/reveal";
+import { WaitlistClosingSection } from "@/components/marketing/waitlist-closing-section";
 import { WaitlistForm } from "@/components/marketing/waitlist-form";
 
 export default function MarketingPage() {
@@ -27,6 +29,18 @@ export default function MarketingPage() {
       <div className="marketing-problem-band border-t border-border/80">
         <div className="mx-auto max-w-2xl px-6 py-20 sm:py-24">
           <ProblemSection />
+        </div>
+      </div>
+
+      <div className="border-t border-border/80">
+        <div className="mx-auto max-w-2xl px-6 py-20 sm:py-24">
+          <HowItWorks />
+        </div>
+      </div>
+
+      <div className="border-t border-border/80">
+        <div className="mx-auto max-w-2xl px-6 py-20 sm:py-24">
+          <WaitlistClosingSection />
         </div>
       </div>
     </>

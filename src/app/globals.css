@@ -168,3 +168,187 @@
 .dark .marketing-problem-list > :not([hidden]) ~ :not([hidden]) {
   border-color: color-mix(in srgb, var(--border) 55%, transparent);
 }
+
+.how-figure {
+  color: var(--border);
+}
+
+.how-step-number-lit {
+  color: var(--primary);
+  text-shadow:
+    0 0 14px color-mix(in srgb, var(--primary) 55%, transparent),
+    0 0 28px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+.how-step-title-lit {
+  color: var(--foreground);
+  text-shadow: 0 0 22px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how-step-number-lit,
+  .how-step-title-lit {
+    text-shadow: none;
+  }
+}
+
+.how-scene-active {
+  animation: how-scene-in 1.05s cubic-bezier(0.12, 1, 0.28, 1) both;
+}
+
+.how-pop {
+  opacity: 0;
+  transform-origin: center;
+  animation: how-pop 1.05s cubic-bezier(0.12, 1, 0.28, 1) both;
+}
+
+.how-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: how-draw 1.55s cubic-bezier(0.12, 1, 0.28, 1) both;
+}
+
+.how-bar {
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: how-bar 1.25s cubic-bezier(0.12, 1, 0.28, 1) both;
+}
+
+.how-signal-travel {
+  offset-rotate: 0deg;
+  animation: how-travel 3.2s cubic-bezier(0.4, 0, 0.2, 1) 0.75s infinite;
+}
+
+.how-core-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: how-ring 3.6s ease-out 0.85s infinite;
+}
+
+.how-match-glow {
+  animation: how-glow 3.4s ease-in-out 1.1s infinite;
+}
+
+.how-missing-glow {
+  animation: how-glow 2.6s ease-in-out 1s infinite;
+}
+
+.how-missing-bar {
+  animation:
+    how-bar 1.25s cubic-bezier(0.12, 1, 0.28, 1) both,
+    how-glow 2.6s ease-in-out 1.35s infinite;
+}
+
+.how-remind-marker {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: how-nudge 3.4s ease-out 0.65s infinite;
+}
+
+@keyframes how-scene-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes how-pop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes how-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes how-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes how-travel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes how-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@keyframes how-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes how-nudge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how-scene-active,
+  .how-pop,
+  .how-draw,
+  .how-bar,
+  .how-signal-travel,
+  .how-core-ring,
+  .how-match-glow,
+  .how-missing-glow,
+  .how-missing-bar,
+  .how-remind-marker {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
+}

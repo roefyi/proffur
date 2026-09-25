@@ -25,9 +25,18 @@ const pains = [
 
 export function ProblemSection() {
   return (
-    <section>
+    <section
+      className="scroll-mt-24"
+      aria-labelledby="problem-heading"
+    >
       <Reveal delay={0}>
-        <h2 className="font-display text-2xl tracking-tight text-balance text-foreground sm:text-3xl">
+        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          The problem
+        </p>
+        <h2
+          id="problem-heading"
+          className="mt-3 font-display text-2xl tracking-tight text-balance text-foreground sm:text-3xl"
+        >
           The work is out there. Finding it shouldn&apos;t be a second job.
         </h2>
       </Reveal>
